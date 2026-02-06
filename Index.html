@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidráulica Industrial Francisco | Venta y Servicio Técnico</title>
+
+    <!-- TU CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FUENTES -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ESTILOS SOLO PARA EL MODAL -->
+    <style>
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 3000;
+      }
+      .modal.active {
+        display: flex;
+      }
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+      }
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        font-size: 45px;
+        cursor: pointer;
+        color: white;
+      }
+      .modal-btn {
+        position: absolute;
+        top: 50%;
+        font-size: 65px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+        padding: 10px;
+      }
+      .prev {
+        left: 30px;
+      }
+      .next {
+        right: 30px;
+      }
+      .gallery-image {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAV ================= -->
+    <nav class="navbar">
+      <div class="logo">HIDRAULICA<span class="highlight">FRANCISCO</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Piezas</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Mis Trabajos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>
+          POTENCIA Y PRECISIÓN <br /><span class="highlight">HIDRÁULICA</span>
+        </h1>
+        <p>
+          Venta de refacciones críticas y soporte técnico especializado en
+          Ecatepec.
+        </p>
+        <a href="#contacto" class="btn-primary">Cotizar Ahora</a>
+        <a href="#proyectos" class="btn-secondary">Ver Galería</a>
+      </div>
+    </header>
+
+    <!-- ================= NOSOTROS ================= -->
+    <section id="nosotros" class="section">
+      <div class="container">
+        <h2>Sobre <span class="highlight">Nosotros</span></h2>
+        <p>
+          En <strong>Hidráulica Industrial Francisco</strong> contamos con
+          amplia experiencia en sistemas hidráulicos industriales. Nuestro
+          compromiso es brindar soluciones confiables, rápidas y duraderas para
+          la industria.
+        </p>
+
+        <div class="grid-servicios">
+          <div class="card-detallada">
+            <h3>✔ Experiencia</h3>
+            <p>
+              Años de trabajo en mantenimiento, reparación y fabricación
+              hidráulica.
+            </p>
+          </div>
+          <div class="card-detallada">
+            <h3>✔ Calidad</h3>
+            <p>Trabajamos con marcas líderes y refacciones garantizadas.</p>
+          </div>
+          <div class="card-detallada">
+            <h3>✔ Compromiso</h3>
+            <p>Atención directa, diagnósticos reales y precios justos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="section dark-bg">
+      <div class="container">
+        <h2>Catálogo de <span class="highlight">Piezas</span></h2>
+
+        <div class="gallery">
+          <div class="gallery-card">
+            <img
+              class="gallery-image"
+              src="img/Piesa1.jpeg"
+              data-images="img/Piesa1.jpeg,img/Piesa2.jpeg,img/Piesa3.jpeg,img/Piesa4.jpeg,img/Piesa5.jpeg"
+            />
+            <div class="overlay">Piezas Disponibles</div>
+          </div>
+
+          <div class="gallery-card">
+            <img
+              class="gallery-image"
+              src="img/Piesa15.jpeg"
+              data-images="img/Piesa15.jpeg,img/Piesa14.jpeg,img/Piesa13.jpeg"
+            />
+            <div class="overlay">Refacciones Especiales</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Nuestros <span class="highlight">Servicios</span></h2>
+
+        <div class="grid-servicios">
+          <div class="card-detallada">
+            <h3>🔧 Reparación Hidráulica</h3>
+            <p>Bombas, válvulas, cilindros y sistemas completos.</p>
+          </div>
+          <div class="card-detallada">
+            <h3>⚙️ Mantenimiento</h3>
+            <p>Preventivo y correctivo para maquinaria industrial.</p>
+          </div>
+          <div class="card-detallada">
+            <h3>🏗️ Fabricación</h3>
+            <p>Unidades hidráulicas a la medida de tu proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section id="proyectos" class="section dark-bg">
+      <div class="container">
+        <h2>Mis <span class="highlight">Trabajos</span></h2>
+
+        <div class="gallery">
+          <div class="gallery-card">
+            <img
+              class="gallery-image"
+              src="img/Reparacion1.jpeg"
+              data-images="img/Reparacion1.jpeg,img/Reparacion2.jpeg,img/Reparacion3.jpeg"
+            />
+            <div class="overlay">Reparaciones</div>
+          </div>
+
+          <div class="gallery-card">
+            <img
+              class="gallery-image"
+              src="img/Unidad1.jpeg"
+              data-images="img/Unidad1.jpeg,img/Unidad2.jpeg,img/Unidad14.jpeg"
+            />
+            <div class="overlay">Unidades Hidráulicas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal" id="modal">
+      <span class="modal-close" id="closeModal">&times;</span>
+      <span class="modal-btn prev" id="prev">&#10094;</span>
+      <img id="modalImage" />
+      <span class="modal-btn next" id="next">&#10095;</span>
+    </div>
+
+    <!-- ================= JS ================= -->
+    <script>
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const closeModal = document.getElementById("closeModal");
+      const nextBtn = document.getElementById("next");
+      const prevBtn = document.getElementById("prev");
+
+      let images = [];
+      let index = 0;
+
+      document.querySelectorAll(".gallery-image").forEach((img) => {
+        img.addEventListener("click", () => {
+          images = img.dataset.images.split(",");
+          index = 0;
+          modalImage.src = images[index];
+          modal.classList.add("active");
+        });
+      });
+
+      nextBtn.onclick = () => {
+        index = (index + 1) % images.length;
+        modalImage.src = images[index];
+      };
+
+      prevBtn.onclick = () => {
+        index = (index - 1 + images.length) % images.length;
+        modalImage.src = images[index];
+      };
+
+      closeModal.onclick = () => modal.classList.remove("active");
+      modal.onclick = (e) =>
+        e.target === modal && modal.classList.remove("active");
+    </script>
+    <footer id="contacto">
+      <div class="footer-grid">
+        <div class="footer-item">
+          <h3>Contacto Directo</h3>
+
+          <p>📍 Ecatepec de Morelos, Agricultura 4-A, Méx.</p>
+
+          <!-- WhatsApp con imagen -->
+          <a
+            href="https://wa.me/5215514035647?text=Hola%20me%20gustaría%20recibir%20información%20sobre%20sus%20servicios"
+            target="_blank"
+            class="whatsapp-link"
+          >
+            <img src="img/whatsapp.png" alt="WhatsApp" />
+            <span>Enviar mensaje por WhatsApp</span>
+          </a>
+
+          <p>🕒 Lun - Vie: 9:00 - 18:00 | Sáb: 9:00 - 14:00</p>
+        </div>
+
+        <div class="footer-item">
+          <h3>Marcas Especializadas</h3>
+          <p>
+            Parker | Eaton | Rexroth | Caterpillar | Vickers | Komatsu | Danfoss
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2024 Hidráulica Francisco - Potencia Garantizada
+      </div>
+    </footer>
+  </body>
+</html>
