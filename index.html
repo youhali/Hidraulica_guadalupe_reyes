@@ -1,276 +1,205 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hidráulica Industrial Francisco | Venta y Servicio Técnico</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidráulica Francisco | Venta y Servicio Técnico en Ecatepec</title>
+  <meta name="description" content="Refacciones, reparación, mantenimiento y fabricación de unidades hidráulicas industriales en Ecatepec de Morelos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- TU CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- ============ NAV ============ -->
+  <nav class="navbar" id="navbar">
+    <a href="#inicio" class="logo">HIDRÁULICA <b>FRANCISCO</b></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#raiz">Nuestra Raíz</a></li>
+      <li><a href="#piezas">Piezas</a></li>
+      <li><a href="#fuerza">Nuestra Fuerza</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <!-- FUENTES -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- ESTILOS SOLO PARA EL MODAL -->
-    <style>
-      .modal {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.92);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 3000;
-      }
-      .modal.active {
-        display: flex;
-      }
-      .modal img {
-        max-width: 90%;
-        max-height: 90%;
-        border-radius: 12px;
-      }
-      .modal-close {
-        position: absolute;
-        top: 20px;
-        right: 35px;
-        font-size: 45px;
-        cursor: pointer;
-        color: white;
-      }
-      .modal-btn {
-        position: absolute;
-        top: 50%;
-        font-size: 65px;
-        cursor: pointer;
-        color: white;
-        user-select: none;
-        padding: 10px;
-      }
-      .prev {
-        left: 30px;
-      }
-      .next {
-        right: 30px;
-      }
-      .gallery-image {
-        cursor: pointer;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- ================= NAV ================= -->
-    <nav class="navbar">
-      <div class="logo">HIDRAULICA<span class="highlight">FRANCISCO</span></div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#productos">Piezas</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Mis Trabajos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <!-- ================= HERO ================= -->
-    <header id="inicio" class="hero">
-      <div class="hero-content">
-        <h1>
-          POTENCIA Y PRECISIÓN <br /><span class="highlight">HIDRÁULICA</span>
-        </h1>
-        <p>
-          Venta de refacciones críticas y soporte técnico especializado en
-          Ecatepec.
-        </p>
-        <a href="#contacto" class="btn-primary">Cotizar Ahora</a>
-        <a href="#proyectos" class="btn-secondary">Ver Galería</a>
-      </div>
-    </header>
-
-    <!-- ================= NOSOTROS ================= -->
-    <section id="nosotros" class="section">
-      <div class="container">
-        <h2>Sobre <span class="highlight">Nosotros</span></h2>
-        <p>
-          En <strong>Hidráulica Industrial Francisco</strong> contamos con
-          amplia experiencia en sistemas hidráulicos industriales. Nuestro
-          compromiso es brindar soluciones confiables, rápidas y duraderas para
-          la industria.
-        </p>
-
-        <div class="grid-servicios">
-          <div class="card-detallada">
-            <h3>✔ Experiencia</h3>
-            <p>
-              Años de trabajo en mantenimiento, reparación y fabricación
-              hidráulica.
-            </p>
-          </div>
-          <div class="card-detallada">
-            <h3>✔ Calidad</h3>
-            <p>Trabajamos con marcas líderes y refacciones garantizadas.</p>
-          </div>
-          <div class="card-detallada">
-            <h3>✔ Compromiso</h3>
-            <p>Atención directa, diagnósticos reales y precios justos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PRODUCTOS ================= -->
-    <section id="productos" class="section dark-bg">
-      <div class="container">
-        <h2>Catálogo de <span class="highlight">Piezas</span></h2>
-
-        <div class="gallery">
-          <div class="gallery-card">
-            <img
-              class="gallery-image"
-              src="img/Piesa1.jpeg"
-              data-images="img/Piesa1.jpeg,img/Piesa2.jpeg,img/Piesa3.jpeg,img/Piesa4.jpeg,img/Piesa5.jpeg"
-            />
-            <div class="overlay">Piezas Disponibles</div>
-          </div>
-
-          <div class="gallery-card">
-            <img
-              class="gallery-image"
-              src="img/Piesa15.jpeg"
-              data-images="img/Piesa15.jpeg,img/Piesa14.jpeg,img/Piesa13.jpeg"
-            />
-            <div class="overlay">Refacciones Especiales</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SERVICIOS ================= -->
-    <section id="servicios" class="section">
-      <div class="container">
-        <h2>Nuestros <span class="highlight">Servicios</span></h2>
-
-        <div class="grid-servicios">
-          <div class="card-detallada">
-            <h3>🔧 Reparación Hidráulica</h3>
-            <p>Bombas, válvulas, cilindros y sistemas completos.</p>
-          </div>
-          <div class="card-detallada">
-            <h3>⚙️ Mantenimiento</h3>
-            <p>Preventivo y correctivo para maquinaria industrial.</p>
-          </div>
-          <div class="card-detallada">
-            <h3>🏗️ Fabricación</h3>
-            <p>Unidades hidráulicas a la medida de tu proyecto.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PROYECTOS ================= -->
-    <section id="proyectos" class="section dark-bg">
-      <div class="container">
-        <h2>Mis <span class="highlight">Trabajos</span></h2>
-
-        <div class="gallery">
-          <div class="gallery-card">
-            <img
-              class="gallery-image"
-              src="img/Reparacion1.jpeg"
-              data-images="img/Reparacion1.jpeg,img/Reparacion2.jpeg,img/Reparacion3.jpeg"
-            />
-            <div class="overlay">Reparaciones</div>
-          </div>
-
-          <div class="gallery-card">
-            <img
-              class="gallery-image"
-              src="img/Unidad1.jpeg"
-              data-images="img/Unidad1.jpeg,img/Unidad2.jpeg,img/Unidad14.jpeg"
-            />
-            <div class="overlay">Unidades Hidráulicas</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= MODAL ================= -->
-    <div class="modal" id="modal">
-      <span class="modal-close" id="closeModal">&times;</span>
-      <span class="modal-btn prev" id="prev">&#10094;</span>
-      <img id="modalImage" />
-      <span class="modal-btn next" id="next">&#10095;</span>
+  <!-- ============ HERO ============ -->
+  <header id="inicio" class="hero">
+    <div>
+      <h1>Potencia y precisión <span class="turq">hidráulica</span> con raíz de <span class="oro">piedra</span></h1>
+      <p>Venta de refacciones críticas, reparación y fabricación de unidades hidráulicas para la industria. Soporte técnico especializado en Ecatepec.</p>
+      <span class="btn-wrap"><a href="#contacto" class="btn btn-oro">Cotizar proyecto</a></span>
+      <span class="btn-wrap t"><a href="#trabajos" class="btn btn-turq">Ver trabajos</a></span>
     </div>
+    <!-- Logo corporativo -->
+    <img class="hero-emblema" src="img/Logo.png" alt="Logo de Hidráulica Francisco" />
+  </header>
 
-    <!-- ================= JS ================= -->
-    <script>
-      const modal = document.getElementById("modal");
-      const modalImage = document.getElementById("modalImage");
-      const closeModal = document.getElementById("closeModal");
-      const nextBtn = document.getElementById("next");
-      const prevBtn = document.getElementById("prev");
+  <!-- ============ NUESTRA RAÍZ ============ -->
+  <section id="raiz" class="section diag-top">
+    <div class="container">
+      <h2 class="reveal">Nuestra <span class="oro">Raíz</span></h2>
+      <div class="greca-linea reveal"></div>
+      <div class="raiz">
+        <div class="reveal">
+          <p>Los mexicas dominaron el agua: acueductos, diques y chinampas que sostuvieron una gran ciudad sobre un lago. Esa obra exigía precisión, conocimiento y trabajo constante.</p>
+          <p>En <strong>Hidráulica Francisco</strong> heredamos esa exigencia. Cada bomba, válvula y cilindro que reparamos, y cada unidad que fabricamos, se mide con la misma disciplina: que la fuerza llegue a donde debe, sin fugas ni fallas.</p>
+          <p>Trabajamos con marcas líderes, diagnósticos reales y precios justos.</p>
+        </div>
+        <div class="raiz-visual reveal" aria-hidden="true">💧</div>
+      </div>
+      <div class="stats">
+        <div class="card reveal"><div class="card-in"><strong>Experiencia</strong>Mantenimiento, reparación y fabricación hidráulica.</div></div>
+        <div class="card reveal"><div class="card-in"><strong>Calidad</strong>Refacciones garantizadas de marcas líderes.</div></div>
+        <div class="card reveal"><div class="card-in"><strong>Compromiso</strong>Atención directa y respuesta rápida.</div></div>
+      </div>
+    </div>
+  </section>
 
-      let images = [];
-      let index = 0;
+  <!-- ============ PIEZAS ============ -->
+  <section id="piezas" class="section piedra-2 diag-both">
+    <div class="container">
+      <h2 class="reveal">Catálogo de <span class="turq">Piezas</span></h2>
+      <div class="greca-linea reveal"></div>
+      <div class="gallery">
+        <div class="gallery-card reveal">
+          <img class="gallery-image" loading="lazy" alt="Piezas hidráulicas disponibles" src="img/Piesa1.jpeg"
+               data-images="img/Piesa1.jpeg,img/Piesa2.jpeg,img/Piesa3.jpeg,img/Piesa4.jpeg,img/Piesa5.jpeg" />
+          <div class="overlay">Piezas disponibles</div>
+        </div>
+        <div class="gallery-card reveal">
+          <img class="gallery-image" loading="lazy" alt="Refacciones especiales" src="img/Piesa15.jpeg"
+               data-images="img/Piesa15.jpeg,img/Piesa14.jpeg,img/Piesa13.jpeg" />
+          <div class="overlay">Refacciones especiales</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      document.querySelectorAll(".gallery-image").forEach((img) => {
-        img.addEventListener("click", () => {
-          images = img.dataset.images.split(",");
-          index = 0;
-          modalImage.src = images[index];
-          modal.classList.add("active");
-        });
-      });
+  <!-- ============ NUESTRA FUERZA ============ -->
+  <section id="fuerza" class="section">
+    <div class="container">
+      <h2 class="reveal">Nuestra <span class="oro">Fuerza</span></h2>
+      <div class="greca-linea reveal"></div>
+      <p class="lead reveal">Lo que hacemos para que tu maquinaria no se detenga.</p>
+      <div class="grid">
+        <article class="card reveal"><div class="card-in"><span class="icono">🔧</span><h3>Reparación hidráulica</h3><p>Bombas, válvulas, cilindros y sistemas completos.</p></div></article>
+        <article class="card reveal"><div class="card-in"><span class="icono">⚙️</span><h3>Mantenimiento</h3><p>Preventivo y correctivo para maquinaria industrial.</p></div></article>
+        <article class="card reveal"><div class="card-in"><span class="icono">🏗️</span><h3>Fabricación</h3><p>Unidades hidráulicas a la medida de tu proyecto.</p></div></article>
+        <article class="card reveal"><div class="card-in"><span class="icono">🩺</span><h3>Diagnóstico</h3><p>Revisión de presión, caudal y fugas para encontrar la causa real.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-      nextBtn.onclick = () => {
-        index = (index + 1) % images.length;
-        modalImage.src = images[index];
-      };
+  <!-- ============ TRABAJOS ============ -->
+  <section id="trabajos" class="section jade-bg diag-both">
+    <div class="container">
+      <h2 class="reveal">Nuestros <span class="oro">Trabajos</span></h2>
+      <div class="greca-linea reveal"></div>
+      <div class="gallery">
+        <div class="gallery-card reveal">
+          <img class="gallery-image" loading="lazy" alt="Reparaciones hidráulicas" src="img/Reparacion1.jpeg"
+               data-images="img/Reparacion1.jpeg,img/Reparacion2.jpeg,img/Reparacion3.jpeg" />
+          <div class="overlay">Reparaciones</div>
+        </div>
+        <div class="gallery-card reveal">
+          <img class="gallery-image" loading="lazy" alt="Unidades hidráulicas fabricadas" src="img/Unidad1.jpeg"
+               data-images="img/Unidad1.jpeg,img/Unidad2.jpeg,img/Unidad14.jpeg" />
+          <div class="overlay">Unidades hidráulicas</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      prevBtn.onclick = () => {
-        index = (index - 1 + images.length) % images.length;
-        modalImage.src = images[index];
-      };
-
-      closeModal.onclick = () => modal.classList.remove("active");
-      modal.onclick = (e) =>
-        e.target === modal && modal.classList.remove("active");
-    </script>
-    <footer id="contacto">
-      <div class="footer-grid">
-        <div class="footer-item">
-          <h3>Contacto Directo</h3>
-
-          <p>📍 Ecatepec de Morelos, Agricultura 4-A, Méx.</p>
-
-          <!-- WhatsApp con imagen -->
-          <a
-            href="https://wa.me/5215514035647?text=Hola%20me%20gustaría%20recibir%20información%20sobre%20sus%20servicios"
-            target="_blank"
-            class="whatsapp-link"
-          >
-            <img src="img/whatsapp.png" alt="WhatsApp" />
-            <span>Enviar mensaje por WhatsApp</span>
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 class="reveal">Cotiza tu <span class="turq">Proyecto</span></h2>
+      <div class="greca-linea reveal"></div>
+      <div class="contacto-grid">
+        <div class="info-contacto reveal">
+          <p>📍 Agricultura 4-A, Ecatepec de Morelos, Méx.</p>
+          <a class="wa-link" target="_blank" rel="noopener"
+             href="https://wa.me/5215514035647?text=Hola%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios">
+            <img src="img/whatsapp.png" alt="" /> <span>Escríbenos por WhatsApp</span>
           </a>
-
-          <p>🕒 Lun - Vie: 9:00 - 18:00 | Sáb: 9:00 - 14:00</p>
+          <p>🕒 Lun–Vie: 9:00–18:00 | Sáb: 9:00–14:00</p>
         </div>
 
-        <div class="footer-item">
-          <h3>Marcas Especializadas</h3>
-          <p>
-            Parker | Eaton | Rexroth | Caterpillar | Vickers | Komatsu | Danfoss
-          </p>
-        </div>
+        <form id="cotForm" class="reveal" novalidate>
+          <label>Nombre <input type="text" id="nombre" required autocomplete="name" /></label>
+          <label>Teléfono <input type="tel" id="tel" required autocomplete="tel" /></label>
+          <label>Servicio
+            <select id="servicio">
+              <option>Reparación hidráulica</option>
+              <option>Mantenimiento</option>
+              <option>Fabricación de unidad</option>
+              <option>Compra de refacciones</option>
+            </select>
+          </label>
+          <label>Describe tu proyecto <textarea id="msg" required></textarea></label>
+          <span class="btn-wrap"><button type="submit" class="btn btn-oro">Enviar por WhatsApp</button></span>
+          <p class="estado" id="estado" role="status"></p>
+        </form>
       </div>
+    </div>
+  </section>
 
-      <div class="footer-bottom">
-        &copy; 2024 Hidráulica Francisco - Potencia Garantizada
-      </div>
-    </footer>
-  </body>
+  <footer>
+    <div class="greca-linea"></div>
+    <p class="marcas">Parker | Eaton | Rexroth | Caterpillar | Vickers | Komatsu | Danfoss</p>
+    <p class="copy">&copy; 2024 Hidráulica Francisco · Potencia garantizada</p>
+  </footer>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Galería">
+    <button class="m-close" id="closeModal" aria-label="Cerrar">&times;</button>
+    <button class="m-prev" id="prev" aria-label="Anterior">&#10094;</button>
+    <img id="modalImage" alt="" />
+    <button class="m-next" id="next" aria-label="Siguiente">&#10095;</button>
+  </div>
+
+  <script>
+    // --- Navbar: efecto cristal al hacer scroll + menú móvil ---
+    const nav = document.getElementById("navbar"), links = document.getElementById("navLinks"), btn = document.getElementById("menuBtn");
+    const onScroll = () => nav.classList.toggle("scrolled", scrollY > 40);
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    btn.onclick = () => btn.setAttribute("aria-expanded", links.classList.toggle("open"));
+    links.addEventListener("click", () => { links.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); });
+
+    // --- Aparición dinámica (fade-in-up) ---
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }), { threshold: .15 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    // --- Galería modal ---
+    const modal = document.getElementById("modal"), mImg = document.getElementById("modalImage");
+    let imgs = [], i = 0;
+    const show = () => mImg.src = imgs[i];
+    const close = () => modal.classList.remove("active");
+    const move = d => { i = (i + d + imgs.length) % imgs.length; show(); };
+    document.querySelectorAll(".gallery-image").forEach(img => img.addEventListener("click", () => {
+      imgs = img.dataset.images.split(","); i = 0; show(); modal.classList.add("active");
+    }));
+    document.getElementById("next").onclick = () => move(1);
+    document.getElementById("prev").onclick = () => move(-1);
+    document.getElementById("closeModal").onclick = close;
+    modal.onclick = e => e.target === modal && close();
+    addEventListener("keydown", e => {
+      if (!modal.classList.contains("active")) return;
+      if (e.key === "Escape") close(); if (e.key === "ArrowRight") move(1); if (e.key === "ArrowLeft") move(-1);
+    });
+
+    // --- Formulario: valida y abre WhatsApp con el mensaje armado ---
+    document.getElementById("cotForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const n = nombre.value.trim(), t = tel.value.trim(), m = msg.value.trim();
+      if (!n || !t || !m) { estado.textContent = "Completa nombre, teléfono y descripción del proyecto."; return; }
+      const texto = `Hola, soy ${n} (${t}). Me interesa: ${servicio.value}.\n${m}`;
+      window.open("https://wa.me/5215514035647?text=" + encodeURIComponent(texto), "_blank", "noopener");
+      estado.textContent = "Abriendo WhatsApp con tu solicitud…";
+    });
+  </script>
+</body>
 </html>
