@@ -135,6 +135,7 @@ strong { color: #f7fdfc; font-weight: 700; }
 .circuito .nucleo { stroke-width: 1.15; stroke: #fff; opacity: .92; }
 .circuito .flujo { stroke-width: 3; stroke: #fff; stroke-dasharray: 2 26; opacity: .85; animation: flujo 1s linear infinite; }
 .circuito .flujo-r { animation-direction: reverse; animation-duration: 1.7s; }
+.circuito .flujo-lento { animation-duration: 1.7s; }
 .pausado .flujo { animation-play-state: paused; }
 @keyframes flujo { to { stroke-dashoffset: -28; } }
 .c-turq { stroke: var(--turquesa); }
@@ -157,6 +158,7 @@ strong { color: #f7fdfc; font-weight: 700; }
 .caminos { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--obsidiana-2); }
 .camino { position: relative; display: grid; align-content: end; min-height: clamp(460px, 62vw, 760px); padding: clamp(22px, 2.6vw, 38px); isolation: isolate; overflow: hidden; border-right: 1px solid var(--vidrio-2); }
 .camino:last-child { border-right: 0; }
+.camino:first-child { padding-left: max(var(--margen), calc((100vw - var(--ancho)) / 2)); }
 .camino > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--curva); }
 .camino::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(5,15,18,.97) 8%, rgba(5,15,18,.82) 42%, rgba(5,15,18,.16) 78%); }
 .camino h3 { font-family: "Tilt Neon", sans-serif; font-stretch: 100%; font-weight: 400; font-size: clamp(1.9rem, 2.9vw, 2.75rem); line-height: 1.08; margin-bottom: 12px; }
@@ -180,6 +182,13 @@ strong { color: #f7fdfc; font-weight: 700; }
 .canales { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
 .canales h2 { font-size: clamp(2.1rem, 4.2vw, 3.9rem); }
 .canales-dibujo { width: 100%; height: auto; overflow: visible; }
+.canales-arte { display: grid; justify-items: center; gap: 10px; }
+.glifo-grande { width: clamp(180px, 24vw, 330px); height: auto; aspect-ratio: 1; }
+.glifo-grande path { vector-effect: non-scaling-stroke; }
+.glifo-grande .g-halo { stroke-width: 15; }
+.glifo-grande .g-gas { stroke-width: 3.6; }
+.glifo-grande .g-nuc { stroke-width: 1.2; }
+.pagina-cab > .glifo-grande { position: absolute; z-index: -1; top: 50%; right: max(var(--margen), calc((100vw - var(--ancho)) / 2)); margin-top: calc(clamp(180px, 24vw, 330px) / -2); }
 
 /* ---------- Galería ---------- */
 .mosaico { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: clamp(60px, 7vw, 104px); grid-auto-flow: dense; gap: 8px; }
@@ -204,8 +213,8 @@ strong { color: #f7fdfc; font-weight: 700; }
 
 /* ---------- Encabezado de páginas interiores ---------- */
 .pagina-cab { position: relative; padding-block: clamp(50px, 8vw, 110px) clamp(40px, 6vw, 80px); background: var(--muro); overflow: clip; isolation: isolate; }
-.pagina-cab h1 { font-size: clamp(2.5rem, 6vw, 5.4rem); max-width: 14em; margin-bottom: 20px; }
-.pagina-cab .entrada { max-width: 42em; }
+.pagina-cab h1 { font-size: clamp(2.5rem, 5.4vw, 5rem); max-width: min(11.5em, 66%); margin-bottom: 20px; }
+.pagina-cab .entrada { max-width: min(42em, 62%); }
 .pagina-cab .acciones { margin-top: 28px; }
 .greca { display: block; width: 100%; height: 26px; overflow: hidden; }
 .greca path { fill: none; stroke: var(--presion); stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
@@ -326,6 +335,9 @@ strong { color: #f7fdfc; font-weight: 700; }
   .portada-foto img { opacity: .4; object-position: 62% 40%; }
   .portada-foto::after { background: linear-gradient(0deg, var(--obsidiana) 2%, rgba(7,20,24,.44) 62%, rgba(7,20,24,.3)); }
   .caminos, .canales, .contacto, .servicio, .obra, .pie-in { grid-template-columns: minmax(0, 1fr); }
+  .camino, .camino:first-child { padding-inline: var(--margen); }
+  .pagina-cab > .glifo-grande { position: static; display: block; width: 108px; margin: 0 0 18px var(--margen); }
+  .pagina-cab h1, .pagina-cab .entrada { max-width: none; }
   .servicio:nth-child(even) .servicio-fotos { order: 0; }
   .camino { min-height: 480px; border-right: 0; border-bottom: 1px solid var(--vidrio-2); }
   .mosaico { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 15vw; }
@@ -345,6 +357,7 @@ strong { color: #f7fdfc; font-weight: 700; }
   .glifo-fila p { grid-column: 1 / -1; }
   .glifo-fila .enlace { grid-column: 1 / -1; }
   .marca span { font-size: .9rem; }
+  .canales-arte .glifo-grande { width: 170px; }
   .servicio-fotos { height: 340px; }
 }
 

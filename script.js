@@ -38,7 +38,6 @@
       }));
       $(".flujo-a", circuito).classList.toggle("flujo-r", !extendiendo);
       $(".flujo-b", circuito).classList.toggle("flujo-r", extendiendo);
-      btn.setAttribute("aria-pressed", String(!extendiendo));
       texto.textContent = extendiendo ? "Retraer el cilindro" : "Extender el cilindro";
       aviso.textContent = extendiendo ? "El cilindro se extiende." : "El cilindro se retrae.";
     };
@@ -239,9 +238,11 @@
       campos.forEach(c => { const t = revisar(c); avisar(c, t); if (t && !primero) primero = c; });
       if (primero) { estadoForm.textContent = ""; primero.focus(); return; }
       const texto = `Hola, soy ${campos[0].value.trim()} (${campos[1].value.trim()}). Me interesa: ${sel.value}.\n${campos[2].value.trim()}`;
-      const abierta = window.open(WA + encodeURIComponent(texto), "_blank", "noopener");
+      const enlace = Object.assign(document.createElement("a"), { href: WA + encodeURIComponent(texto), target: "_blank", rel: "noopener" });
+      document.body.append(enlace);
+      enlace.click();
+      enlace.remove();
       estadoForm.textContent = "Abriendo WhatsApp con tu mensaje. Solo falta que lo envíes.";
-      if (abierta === null) location.href = WA + encodeURIComponent(texto);
     });
   }
 })();

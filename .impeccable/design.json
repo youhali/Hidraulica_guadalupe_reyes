@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T00:00:00Z",
+  "title": "Design System: Hidráulica Francisco",
+  "extensions": {
+    "colorMeta": {
+      "turquesa": { "role": "primary", "displayName": "Gas Turquesa", "canonical": "#4ff2df", "tonalRamp": ["#063b37", "#0a5a53", "#0f7c72", "#17a193", "#2bc9b8", "#4ff2df", "#8cf9ec", "#d4fff9"] },
+      "presion": { "role": "secondary", "displayName": "Electrodo Rojo", "canonical": "#ff6a3d", "tonalRamp": ["#3d1206", "#66200c", "#8f2f14", "#ba401d", "#e15429", "#ff6a3d", "#ffb199", "#ffe3da"] },
+      "ambar": { "role": "tertiary", "displayName": "Ámbar de Sodio", "canonical": "#ffc45c", "tonalRamp": ["#3d2a06", "#66470c", "#8f6514", "#ba851d", "#e1a42f", "#ffc45c", "#ffdc9e", "#fff4de"] },
+      "obsidiana": { "role": "neutral", "displayName": "Muro de Obsidiana", "canonical": "#071418", "tonalRamp": ["#040d10", "#071418", "#0c1e23", "#14292f", "#20383f", "#3a5a62", "#7f9a9e", "#c8dcd9"] },
+      "tezontle": { "role": "neutral", "displayName": "Muro de Tezontle", "canonical": "#1f0c0a", "tonalRamp": ["#140706", "#1f0c0a", "#2d1410", "#3e1e18", "#553026", "#7a5044", "#ab8a80", "#e0cdc7"] },
+      "jade": { "role": "neutral", "displayName": "Muro de Jade", "canonical": "#06201b", "tonalRamp": ["#031410", "#06201b", "#0b2d26", "#143d34", "#225247", "#40746a", "#83a69e", "#cfe2dd"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display encendido", "purpose": "Título único de cada página." },
+      "headline": { "displayName": "Título encendido", "purpose": "Títulos de sección." },
+      "title": { "displayName": "Placa", "purpose": "Nombres de servicios y piezas." },
+      "body": { "displayName": "Lectura", "purpose": "Párrafos y formularios." }
+    },
+    "shadows": [
+      { "name": "halo-texto", "value": "0 0 2px rgba(255,255,255,.55), 0 0 12px rgba(79,242,223,.72), 0 0 34px rgba(79,242,223,.34)", "purpose": "Texto encendido en Tilt Neon." },
+      { "name": "aura-boton", "value": "0 0 0 1px #9ffbef inset, 0 0 26px rgba(79,242,223,.42)", "purpose": "Acción principal encendida." }
+    ],
+    "motion": [
+      { "name": "curva", "value": "cubic-bezier(.22, 1, .36, 1)", "purpose": "Vástago, válvula y estados." },
+      { "name": "flujo", "value": "1s linear infinite", "purpose": "Flujo del circuito; se pausa fuera de pantalla y con movimiento reducido." }
+    ],
+    "breakpoints": [
+      { "name": "movil", "value": "820px" },
+      { "name": "menu", "value": "1040px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tubo principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal, normalmente WhatsApp.",
+      "html": "<a class=\"ds-tubo\" href=\"#\">Cotizar por WhatsApp</a>",
+      "css": ".ds-tubo { position: relative; display: inline-flex; align-items: center; min-height: 54px; padding: 12px 28px; border-radius: 999px; background: #4ff2df; color: #04211f; font-weight: 700; text-decoration: none; box-shadow: 0 0 26px rgba(79,242,223,.42); transition: transform .14s, background-color .14s; } .ds-tubo:hover { background: #8cf9ec; } .ds-tubo:active { transform: scale(.97); } .ds-tubo:focus-visible { outline: 3px solid #ffc45c; outline-offset: 3px; } .ds-tubo::before, .ds-tubo::after { content: ''; position: absolute; top: 50%; width: 8px; height: 16px; margin-top: -8px; background: #ff6a3d; } .ds-tubo::before { left: -5px; } .ds-tubo::after { right: -5px; }"
+    },
+    {
+      "name": "Tubo de vidrio",
+      "kind": "button",
+      "description": "Acción secundaria apagada.",
+      "html": "<a class=\"ds-vidrio\" href=\"#\">Ver trabajos</a>",
+      "css": ".ds-vidrio { display: inline-flex; align-items: center; min-height: 54px; padding: 12px 28px; border-radius: 999px; background: rgba(190,228,224,.06); color: #effffc; font-weight: 700; text-decoration: none; box-shadow: inset 0 0 0 1.5px rgba(190,228,224,.24); } .ds-vidrio:hover { box-shadow: inset 0 0 0 1.5px #4ff2df, 0 0 20px rgba(79,242,223,.28); } .ds-vidrio:focus-visible { outline: 3px solid #ffc45c; outline-offset: 3px; }"
+    },
+    {
+      "name": "Campo",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Campo del formulario de cotización.",
+      "html": "<input class=\"ds-campo\" placeholder=\"Nombre\">",
+      "css": ".ds-campo { min-height: 54px; padding: 13px 15px; border: 1.5px solid rgba(190,228,224,.42); border-radius: 8px; background: #0c1e23; color: #e4efed; font-size: 16px; } .ds-campo:focus { outline: 0; border-color: #4ff2df; box-shadow: 0 0 16px rgba(79,242,223,.32); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Circuito Encendido",
+    "overview": "Un circuito hidráulico y un rótulo de neón son el mismo dibujo: una línea continua que no debe tener fugas. El neón dibuja la idea y las fotos reales la prueban.",
+    "keyCharacteristics": [
+      "Un solo tubo continuo en el margen de cada página, que se enciende al bajar.",
+      "Símbolos hidráulicos correctos: un técnico debe poder leerlos.",
+      "Glifos dibujados como tubo, con halo, gas y núcleo.",
+      "Fotos reales del taller, sin filtros ni textos encima, salvo en la portada y los tres caminos."
+    ],
+    "rules": [
+      { "name": "The Presión Es Roja Rule", "body": "En un circuito, rojo significa presión y turquesa significa retorno. No se intercambian por gusto.", "section": "colors" },
+      { "name": "The Muro Oscuro Rule", "body": "El oscuro no es una moda aquí: el neón solo existe de noche. Todo texto de lectura se mantiene en Archivo y sin brillo.", "section": "colors" },
+      { "name": "The Solo Lo Encendido Brilla Rule", "body": "El brillo es para Tilt Neon y para los tubos. Un párrafo con brillo no se lee.", "section": "typography" },
+      { "name": "The Luz, No Sombra Rule", "body": "Si algo necesita destacar, se enciende; no se le pone sombra.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do dibujar cada glifo nuevo con las tres capas del tubo: halo, gas y núcleo.",
+      "Do mantener cada página a un toque de WhatsApp.",
+      "Do terminar la línea continua de cada página en el electrodo de una acción real.",
+      "Do verificar los símbolos hidráulicos y los datos históricos antes de publicarlos."
+    ],
+    "donts": [
+      "Don't inventar años de experiencia, clientes, certificaciones ni garantías.",
+      "Don't dibujar remates que parezcan cruces u otros símbolos ajenos sobre glifos y pirámides.",
+      "Don't volver al basalto con dorado y letra Cinzel del sitio anterior.",
+      "Don't poner animaciones de entrada en el contenido: debe estar visible desde el inicio."
+    ]
+  }
+}
