@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hidraulica-guadalupe-reyes.onrender.com/sitemap.xml
